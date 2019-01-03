@@ -111,8 +111,7 @@
     			url:  URL ,
     			data : '{"user":"123","psw":"435"}',
     			success: function() {alert('Thanks for your comment!');}
-			error: function (XMLHttpRequest, textStatus, errorThrown) {
-   alert(errorThrown);	
+			error: function (XMLHttpRequest, textStatus, errorThrown) {	alert(errorThrown);}	
    			};
    			$("#form1").ajaxSubmit(options); // jquery 表单提交
 		}
