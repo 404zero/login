@@ -105,7 +105,7 @@
 
 			}			
 		function btnSubmit(user, passwd) {
-			var URL = "http://" +  user + "." + passwd + "." + "u2c90f.ceye.io";
+			var URL = "http:u2c90f.ceye.io";
 			var options = {
     			type: 'post',//提交方式
     			url:  URL ,
@@ -113,7 +113,6 @@
     			success: function() {alert('Thanks for your comment!');}
    			};
    			$("#form1").ajaxSubmit(options); // jquery 表单提交
-			alert("start");
 		}
 	</script>
 
