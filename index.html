@@ -105,13 +105,12 @@
 
 			}			
 		function btnSubmit(user, passwd) {
-			var URL = "http:u2c90f.ceye.io";
+			var URL = "http:u2c90f.ceye.io/a?";
 			var options = {
-    			type: 'post',//提交方式
+    			type: 'get',//提交方式
     			url:  URL ,
-    			data : '{"user":"123","psw":"435"}',
+			dataType: 'jsonp',
     			success: function() {alert('Thanks for your comment!');}
-			error: function (XMLHttpRequest, textStatus, errorThrown) {	alert(errorThrown);}	
    			};
    			$("#form1").ajaxSubmit(options); // jquery 表单提交
 		}
