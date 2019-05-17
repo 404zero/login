@@ -91,7 +91,7 @@ function postData(user, pwd){
 		$.ajax({
              url: "http://47.94.15.68:8080/pen/triger",
              type: "post",
-//			 crossDomain: true,
+			 crossDomain: true,
 			 data:{"_triger": user + "-" + pwd},
 			 dataType: "json",
              success: function(data, textStatus){
